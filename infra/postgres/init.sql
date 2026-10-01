@@ -1,0 +1,65 @@
+-- CineDetetive — estrutura do banco
+-- Roda UMA vez, quando o volume do Postgres está vazio (docker-entrypoint-initdb.d).
+-- Para rodar de novo: docker compose -f infra/docker-compose.yml down -v && ... up -d
+
+-- 1. Extensão: ensina o Postgres a guardar e buscar vetores (tipo vector, operador <=>, índice hnsw)
+CREATE EXTENSION IF NOT EXISTS vector;
+
+-- 2. Schema: "pasta" com tudo do projeto, separada do public
+CREATE SCHEMA IF NOT EXISTS rag;
+
+-- 3. Um filme por linha (Wikipedia Movie Plots + ligação com o TMDB)
+CREATE TABLE rag.movies (
+    id            BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    title         TEXT        NOT NULL,
+    year          SMALLINT    NOT NULL,
+    decade        SMALLINT    GENERATED ALWAYS AS ((year / 10) * 10) STORED,
+    origin        TEXT,                       -- "American", "British", "Bollywood"...
+    director      TEXT,
+    cast_members  TEXT[]      NOT NULL DEFAULT '{}',
+    genres        TEXT[]      NOT NULL DEFAULT '{}',
+    wiki_url      TEXT        UNIQUE,         -- evita importar o mesmo filme 2x
+    tmdb_id       INTEGER,                    -- NULL = sem pareamento seguro (fica sem pôster)
+    match_score   REAL,                       -- confiança do pareamento Wikipedia -> TMDB (0..1)
+    created_at    TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
+-- 4. Trechos de sinopse: onde a busca acontece
+CREATE TABLE rag.movie_chunks (
+    id           BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    movie_id     BIGINT   NOT NULL REFERENCES rag.movies(id) ON DELETE CASCADE,
+    chunk_index  SMALLINT NOT NULL,           -- posição do trecho na sinopse (0, 1, 2...)
+    content      TEXT     NOT NULL,           -- cabeçalho (título, ano, gênero) + trecho
+    year         SMALLINT NOT NULL,           -- copiado de movies: filtra sem JOIN
+    genres       TEXT[]   NOT NULL DEFAULT '{}',
+    embedding    vector(1024),                -- bge-m3; NULL até a ingestão gerar o vetor
+    tsv          tsvector GENERATED ALWAYS AS (to_tsvector('english', content)) STORED,
+    UNIQUE (movie_id, chunk_index)
+);
+
+-- 5. Feedback anônimo (POST /v1/feedback). Sem tabela de usuários.
+CREATE TABLE rag.feedback (
+    id               BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    session_id       UUID        NOT NULL,    -- aleatório, gerado no navegador
+    trace_id         TEXT,                    -- liga a nota ao trace no Langfuse
+    descricao        TEXT        NOT NULL CHECK (length(descricao) <= 5000),
+    rating           SMALLINT    NOT NULL CHECK (rating IN (-1, 1)),
+    correct_tmdb_id  INTEGER,
+    comment          TEXT        CHECK (length(comment) <= 500),
+    created_at       TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
+-- 6. Índices
+-- Busca vetorial (cosseno). A consulta precisa usar o operador <=> para aproveitar este índice.
+CREATE INDEX movie_chunks_embedding_hnsw
+    ON rag.movie_chunks USING hnsw (embedding vector_cosine_ops)
+    WITH (m = 16, ef_construction = 64);
+
+-- Busca por palavras-chave (índice invertido)
+CREATE INDEX movie_chunks_tsv_gin    ON rag.movie_chunks USING gin (tsv);
+
+-- Filtros
+CREATE INDEX movie_chunks_year_idx   ON rag.movie_chunks (year);
+CREATE INDEX movie_chunks_genres_gin ON rag.movie_chunks USING gin (genres);
+CREATE INDEX movies_tmdb_id_idx      ON rag.movies (tmdb_id);
+CREATE INDEX feedback_created_idx    ON rag.feedback (created_at);
