@@ -4,6 +4,9 @@ services:
   postgres:
     image: pgvector/pgvector:pg16
     container_name: cinedetetive-postgres
+    # Memória compartilhada (/dev/shm). O padrão do Docker (64 MB) não basta para
+    # construir o índice HNSW de ~117 mil vetores com maintenance_work_mem = 1GB.
+    shm_size: 1gb
     environment:
       POSTGRES_USER: cinedetetive
       POSTGRES_PASSWORD: cinedetetive

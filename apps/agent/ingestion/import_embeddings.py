@@ -10,8 +10,10 @@ Depois de gravar, faz duas verificações:
   2. Primeira busca vetorial de verdade, para ver o RAG achando filmes.
 
 Uso (dentro de apps/agent):  uv run python ingestion/import_embeddings.py
+                              uv run python ingestion/import_embeddings.py --so-verificar
 """
 
+import sys
 import time
 
 import httpx
@@ -85,7 +87,7 @@ def conferir_compatibilidade(conn: psycopg.Connection, n: int = 20) -> None:
     linhas = conn.execute(
         "SELECT content, embedding FROM rag.movie_chunks ORDER BY random() LIMIT %s", (n,)
     ).fetchall()
-    colab = np.array([e for _, e in linhas], dtype="float32")
+    colab = np.array([e.to_numpy() for _, e in linhas], dtype="float32")
     ollama = embed_ollama([c for c, _ in linhas])
     similaridade = (colab * ollama).sum(axis=1) / (np.linalg.norm(colab, axis=1) * np.linalg.norm(ollama, axis=1))
     ok = similaridade.min() >= COMPATIBILIDADE_MINIMA
@@ -95,6 +97,9 @@ def conferir_compatibilidade(conn: psycopg.Connection, n: int = 20) -> None:
 
 def primeira_busca(conn: psycopg.Connection, pergunta: str) -> None:
     vetor = embed_ollama([pergunta])[0]
+    # O HNSW é aproximado: ef_search = quantos candidatos ele examina. O padrão (40) deixou o
+    # Groundhog Day de fora em "a man relives the same day"; com 100 ele volta para 1º (~15 ms).
+    conn.execute("SET hnsw.ef_search = 100")
     filmes = conn.execute(
         """SELECT m.title, m.year, round((1 - (c.embedding <=> %s))::numeric, 3) AS similaridade
            FROM rag.movie_chunks c JOIN rag.movies m ON m.id = c.movie_id
@@ -108,10 +113,11 @@ def primeira_busca(conn: psycopg.Connection, pergunta: str) -> None:
 
 
 def main() -> None:
-    ids, vetores, modelo = carregar()
+    so_verificar = "--so-verificar" in sys.argv
     with psycopg.connect(settings.database_url) as conn:
         register_vector(conn)
-        gravar(conn, ids, vetores, modelo)
+        if not so_verificar:
+            gravar(conn, *carregar())
 
         sem = conn.execute("SELECT count(*) FROM rag.movie_chunks WHERE embedding IS NULL").fetchone()[0]
         print(f"Trechos sem embedding: {sem:,}")

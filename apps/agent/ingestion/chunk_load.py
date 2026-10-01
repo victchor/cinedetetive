@@ -5,7 +5,7 @@ que o usuário lembra. Trechos de ~800 caracteres mantêm cada cena nítida.
 
 Entrada:  data/clean/movies_linked.parquet
 Saída:    rag.movies e rag.movie_chunks no Postgres
-          data/colab/chunks.parquet  (id + texto, para o Colab gerar os embeddings)
+          data/colab/chunks_parte1..8.parquet  (id + texto, para o Colab gerar os embeddings)
 
 Uso (dentro de apps/agent):  uv run python ingestion/chunk_load.py
 Pode rodar de novo: apaga e recarrega as tabelas.
@@ -19,7 +19,8 @@ import psycopg
 from cinedetetive.config import settings
 
 ENTRADA = settings.data_dir / "clean" / "movies_linked.parquet"
-SAIDA_COLAB = settings.data_dir / "colab" / "chunks.parquet"
+PASTA_COLAB = settings.data_dir / "colab"
+PARTES_COLAB = 8  # partes pequenas (~4 MB) para subir no Drive sem limite de tamanho
 
 TAMANHO_TRECHO = 800   # caracteres de sinopse por trecho (sem contar o cabeçalho)
 SOBREPOSICAO = 0.15    # ~120 caracteres repetidos entre trechos vizinhos
@@ -136,9 +137,14 @@ def main() -> None:
     print("Gravando no Postgres...")
     gravar_no_banco(filmes, trechos)
 
-    SAIDA_COLAB.parent.mkdir(parents=True, exist_ok=True)
-    trechos[["id", "content"]].to_parquet(SAIDA_COLAB, index=False)
-    print(f"Exportado para o Colab: {SAIDA_COLAB} ({SAIDA_COLAB.stat().st_size / 1e6:.1f} MB)")
+    PASTA_COLAB.mkdir(parents=True, exist_ok=True)
+    for antiga in PASTA_COLAB.glob("chunks_parte*.parquet"):
+        antiga.unlink()
+    por_parte = -(-len(trechos) // PARTES_COLAB)  # divisão arredondando para cima
+    for i in range(PARTES_COLAB):
+        parte = trechos.iloc[i * por_parte : (i + 1) * por_parte][["id", "content"]]
+        parte.to_parquet(PASTA_COLAB / f"chunks_parte{i + 1}.parquet", index=False, compression="zstd")
+    print(f"Exportado para o Colab: {PASTA_COLAB}/chunks_parte1..{PARTES_COLAB}.parquet")
 
 
 if __name__ == "__main__":
