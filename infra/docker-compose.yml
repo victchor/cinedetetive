@@ -1,0 +1,23 @@
+name: cinedetetive
+
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: cinedetetive-postgres
+    environment:
+      POSTGRES_USER: cinedetetive
+      POSTGRES_PASSWORD: cinedetetive
+      POSTGRES_DB: cinedetetive
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./postgres:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U cinedetetive -d cinedetetive"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  pgdata:

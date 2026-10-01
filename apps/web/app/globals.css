@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-ink: #0c0b10;
+  --color-film: #14131a;
+  --color-reel: #1c1b24;
+  --color-line: #2b2935;
+  --color-paper: #eeeae2;
+  --color-muted: #9b97a6;
+  --color-marquee: #f2b544;
+  --color-marquee-deep: #c98a1b;
+  --color-ok: #6fcf97;
+  --color-nope: #ef7b6b;
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-display-serif);
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+
+/* Grão de película bem sutil no fundo */
+.grain::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  z-index: 0;
+}
+
+.spotlight {
+  background: radial-gradient(60% 50% at 50% 0%, rgb(242 181 68 / 0.09), transparent 70%);
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0.25;
+  }
+}
+
+.cursor-blink::after {
+  content: "▍";
+  margin-left: 1px;
+  color: var(--color-marquee);
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes reel {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-reel {
+  animation: reel 1.6s linear infinite;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+
+.animate-rise {
+  animation: rise 0.25s ease-out both;
+}
+
+::selection {
+  background: rgb(242 181 68 / 0.35);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-line) transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-reel,
+  .animate-rise,
+  .cursor-blink::after {
+    animation: none;
+  }
+}

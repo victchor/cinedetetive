@@ -1,0 +1,5 @@
+# Arquivos de texto sempre com LF no repositório.
+# Importante para scripts que rodam dentro de containers Linux (init.sql, .sh).
+* text=auto eol=lf
+*.pdf binary
+*.ico binary

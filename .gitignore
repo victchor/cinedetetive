@@ -1,0 +1,21 @@
+# Segredos
+.env
+.env.local
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Node / Next.js
+node_modules/
+.next/
+
+# Dados baixados (dataset do Kaggle, cache) — grandes e com licença própria
+data/
+
+# Sistema / editor
+.DS_Store
+Thumbs.db
+.vscode/
