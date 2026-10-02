@@ -13,6 +13,7 @@ Os números (40, 40, 10) são pontos de partida: o eval do passo 6 é que diz se
 from collections import defaultdict
 from typing import Literal
 
+import numpy as np
 import psycopg
 from pydantic import BaseModel, Field
 
@@ -112,15 +113,22 @@ def buscar(
     excluir_tmdb_ids: list[int] | None = None,
     k: int = 10,
     agregacao: Literal["soma", "max"] = "max",
+    modo: Literal["hibrida", "vetor", "texto"] = "hibrida",
+    vetor: np.ndarray | None = None,
 ) -> Resultado:
     """Devolve os k filmes mais prováveis para a descrição.
 
     `consulta` deveria estar em inglês (idioma das sinopses): o vetor funciona em português
     (bge-m3 é multilíngue), mas a busca por palavras não. A tradução entra no passo seguinte.
+
+    `modo` liga só uma das buscas (para o eval comparar) e `vetor` reaproveita um embedding já
+    calculado (o eval roda a mesma pergunta em várias variações sem chamar o Ollama de novo).
     """
     filtros = filtros or Filtros()
+    if vetor is None and modo != "texto":
+        vetor = embed_consulta(consulta)
     params = {
-        "vetor": embed_consulta(consulta),
+        "vetor": vetor,
         "texto": consulta,
         "ano_min": filtros.ano_min,
         "ano_max": filtros.ano_max,
@@ -132,8 +140,8 @@ def buscar(
 
     conn.execute(f"SET hnsw.ef_search = {EF_SEARCH}")
     conn.execute("SET hnsw.iterative_scan = relaxed_order")
-    por_vetor = conn.execute(SQL_VETOR, params).fetchall()
-    por_texto = conn.execute(SQL_TEXTO, params).fetchall()
+    por_vetor = conn.execute(SQL_VETOR, params).fetchall() if modo != "texto" else []
+    por_texto = conn.execute(SQL_TEXTO, params).fetchall() if modo != "vetor" else []
 
     ids_vetor = [chunk_id for chunk_id, _ in por_vetor]
     ids_texto = [chunk_id for chunk_id, _ in por_texto]
