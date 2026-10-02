@@ -118,6 +118,20 @@ def gravar_no_banco(filmes: pd.DataFrame, trechos: pd.DataFrame) -> None:
         cur.execute("SELECT setval(pg_get_serial_sequence('rag.movie_chunks', 'id'), (SELECT max(id) FROM rag.movie_chunks))")
 
 
+def atualizar_lexemes(conn: psycopg.Connection) -> int:
+    """IDF de cada palavra: palavra rara pesa mais na busca por palavras (retriever.py)."""
+    conn.execute("""
+        CREATE TABLE IF NOT EXISTS rag.lexemes (word TEXT PRIMARY KEY, ndoc INTEGER NOT NULL, idf REAL NOT NULL)
+    """)
+    conn.execute("TRUNCATE rag.lexemes")
+    conn.execute("""
+        INSERT INTO rag.lexemes (word, ndoc, idf)
+        SELECT word, ndoc, ln((SELECT count(*) FROM rag.movie_chunks)::real / ndoc)
+        FROM ts_stat('SELECT tsv FROM rag.movie_chunks')
+    """)
+    return conn.execute("SELECT count(*) FROM rag.lexemes").fetchone()[0]
+
+
 def main() -> None:
     filmes = pd.read_parquet(ENTRADA).reset_index(drop=True)
     filmes.insert(0, "id", range(1, len(filmes) + 1))
@@ -136,6 +150,8 @@ def main() -> None:
 
     print("Gravando no Postgres...")
     gravar_no_banco(filmes, trechos)
+    with psycopg.connect(settings.database_url, autocommit=True) as conn:
+        print(f"Estatísticas de palavras (IDF): {atualizar_lexemes(conn):,} palavras distintas")
 
     PASTA_COLAB.mkdir(parents=True, exist_ok=True)
     for antiga in PASTA_COLAB.glob("chunks_parte*.parquet"):

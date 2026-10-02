@@ -52,6 +52,15 @@ CREATE TABLE rag.feedback (
     created_at       TIMESTAMPTZ NOT NULL DEFAULT now()
 );
 
+-- 5b. Em quantos trechos cada palavra (lexema) aparece. O ts_rank do Postgres trata todas as
+--     palavras igual; com isto a busca dá mais peso às raras ("groundhog") que às comuns ("day").
+--     Preenchida por ingestion/chunk_load.py depois de carregar os trechos.
+CREATE TABLE rag.lexemes (
+    word  TEXT PRIMARY KEY,
+    ndoc  INTEGER NOT NULL,           -- em quantos trechos aparece
+    idf   REAL    NOT NULL            -- ln(total de trechos / ndoc): quanto maior, mais rara
+);
+
 -- 6. Índices
 -- Busca vetorial (cosseno). A consulta precisa usar o operador <=> para aproveitar este índice.
 CREATE INDEX movie_chunks_embedding_hnsw
