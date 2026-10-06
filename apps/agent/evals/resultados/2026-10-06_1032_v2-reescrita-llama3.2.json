@@ -1,0 +1,2362 @@
+{
+  "versao": "v2-reescrita-llama3.2",
+  "data": "2026-10-06T10:32:54",
+  "dataset": "manual.jsonl",
+  "k": 20,
+  "llm": "llama3.2:3b",
+  "prompt_reescrita": "reescrita-v1",
+  "reescritas": {
+    "m001": {
+      "consulta_en": "a plane spins wildly at the end of the film and the movie ends before it crashes",
+      "ano_min": null,
+      "ano_max": null,
+      "generos": [],
+      "pessoas": [],
+      "fallback": false
+    },
+    "m002": {
+      "consulta_en": "the boy claims to see dead people, and there is a twist at the end with his doctor",
+      "ano_min": null,
+      "ano_max": null,
+      "generos": [],
+      "pessoas": [],
+      "fallback": false
+    },
+    "m003": {
+      "consulta_en": "black and white classic film, woman is stabbed in the shower of a seedy motel on the edge of town",
+      "ano_min": null,
+      "ano_max": null,
+      "generos": [
+        "drama",
+        "thriller"
+      ],
+      "pessoas": [],
+      "fallback": false
+    },
+    "m004": {
+      "consulta_en": "prisoner spends years digging a hole behind a poster in his cell and escapes through the sewer on a rainy night",
+      "ano_min": null,
+      "ano_max": null,
+      "generos": [],
+      "pessoas": [],
+      "fallback": false
+    },
+    "m005": {
+      "consulta_en": "a group of kids on bicycles ride off into the distance in front of the moon with a small animal in a basket",
+      "ano_min": null,
+      "ano_max": null,
+      "generos": [],
+      "pessoas": [],
+      "fallback": false
+    },
+    "m006": {
+      "consulta_en": "old musical where man sings and dances on the street under the rain, hanged from a lamppost",
+      "ano_min": null,
+      "ano_max": null,
+      "generos": [
+        "musical"
+      ],
+      "pessoas": [],
+      "fallback": false
+    },
+    "m007": {
+      "consulta_en": "author suffers a car accident and a deranged fan takes care of him at her house, has a terrifying scene where she breaks his ankles",
+      "ano_min": null,
+      "ano_max": null,
+      "generos": [
+        "horror"
+      ],
+      "pessoas": [
+        "author's name"
+      ],
+      "fallback": false
+    },
+    "m008": {
+      "consulta_en": "there is a bomb on a bus that explodes if it drives slowly, so it can never stop",
+      "ano_min": null,
+      "ano_max": null,
+      "generos": [],
+      "pessoas": [],
+      "fallback": false
+    },
+    "m009": {
+      "consulta_en": "man discovers his entire life has been a TV show and the city is just a set",
+      "ano_min": null,
+      "ano_max": null,
+      "generos": [
+        "sci-fi",
+        "comedy"
+      ],
+      "pessoas": [],
+      "fallback": false
+    },
+    "m010": {
+      "consulta_en": "old man sets up a bunch of balloons on his house and flies away, a young scout boy accidentally goes along for the ride",
+      "ano_min": null,
+      "ano_max": null,
+      "generos": [
+        "animation"
+      ],
+      "pessoas": [],
+      "fallback": false
+    },
+    "m011": {
+      "consulta_en": "a couple ends their relationship and both undergo a treatment at a clinic to erase their memories of each other",
+      "ano_min": null,
+      "ano_max": null,
+      "generos": [
+        "romance",
+        "drama"
+      ],
+      "pessoas": [],
+      "fallback": false
+    },
+    "m012": {
+      "consulta_en": "a group of friends wake up in a hotel room after a bachelor party and have no memory of what happened, find a tiger in the bathroom and the groom is missing",
+      "ano_min": null,
+      "ano_max": null,
+      "generos": [],
+      "pessoas": [],
+      "fallback": false
+    },
+    "m013": {
+      "consulta_en": "cartoon about a clever mouse who runs a restaurant kitchen and controls a clumsy man by pulling his hair in a kitchen setting",
+      "ano_min": null,
+      "ano_max": null,
+      "generos": [
+        "animation"
+      ],
+      "pessoas": [],
+      "fallback": false
+    },
+    "m014": {
+      "consulta_en": "the whole movie takes place in a single room, a jury has to decide if a boy is guilty, but one man thinks he might be innocent",
+      "ano_min": null,
+      "ano_max": null,
+      "generos": [],
+      "pessoas": [],
+      "fallback": false
+    },
+    "m015": {
+      "consulta_en": "a girl is possessed by a demon in the 1970s, her family calls in priests to save her",
+      "ano_min": 1970,
+      "ano_max": 1979,
+      "generos": [
+        "horror",
+        "supernatural"
+      ],
+      "pessoas": [],
+      "fallback": false
+    },
+    "m016": {
+      "consulta_en": "teen romance from the 90s, the guy gets murdered and comes back as a ghost, communicates with his girlfriend through a gypsy medium",
+      "ano_min": 1990,
+      "ano_max": 1999,
+      "generos": [
+        "romance",
+        "fantasy"
+      ],
+      "pessoas": [],
+      "fallback": false
+    },
+    "m017": {
+      "consulta_en": "photographer with a paralyzed leg becomes obsessed with spying on his neighbors through the window and suspects one of them of murdering his wife",
+      "ano_min": 1950,
+      "ano_max": null,
+      "generos": [
+        "thriller",
+        "mystery"
+      ],
+      "pessoas": [],
+      "fallback": false
+    },
+    "m018": {
+      "consulta_en": "recent action film, 2015, high-speed chase in the desert, entire movie with deranged trucks, features a woman with a prosthetic arm",
+      "ano_min": 2010,
+      "ano_max": 2019,
+      "generos": [
+        "action"
+      ],
+      "pessoas": [],
+      "fallback": false
+    },
+    "m019": {
+      "consulta_en": "Tom Hanks is stranded alone on a deserted island after a plane crash, and he has a conversation with a volleyball he names 'Wilson'",
+      "ano_min": null,
+      "ano_max": null,
+      "generos": [
+        "adventure",
+        "comedy"
+      ],
+      "pessoas": [
+        "Tom Hanks"
+      ],
+      "fallback": false
+    },
+    "m020": {
+      "consulta_en": "Robert De Niro plays a solitary New York taxi driver who becomes increasingly unhinged and talks to himself in front of the mirror",
+      "ano_min": null,
+      "ano_max": null,
+      "generos": [],
+      "pessoas": [
+        "Robert De Niro"
+      ],
+      "fallback": false
+    },
+    "m021": {
+      "consulta_en": "Jack Nicholson plays a caretaker at an isolated hotel during the winter with a family, loses his mind, and uses an axe to break down the doors",
+      "ano_min": null,
+      "ano_max": null,
+      "generos": [],
+      "pessoas": [
+        "Jack Nicholson"
+      ],
+      "fallback": false
+    },
+    "m022": {
+      "consulta_en": "Meryl Streep plays a ruthless editor-in-chief of a fashion magazine, while her new assistant struggles to understand fashion",
+      "ano_min": null,
+      "ano_max": null,
+      "generos": [
+        "comedy"
+      ],
+      "pessoas": [
+        "Meryl Streep"
+      ],
+      "fallback": false
+    },
+    "m023": {
+      "consulta_en": "girl and her scientist grandfather travel through time in a car, likely from the 1990s",
+      "ano_min": 1990,
+      "ano_max": 1999,
+      "generos": [],
+      "pessoas": [],
+      "fallback": false
+    },
+    "m024": {
+      "consulta_en": "boy is left behind at home when his family goes on spring break, so he sets up traps for two burglars",
+      "ano_min": null,
+      "ano_max": null,
+      "generos": [],
+      "pessoas": [],
+      "fallback": false
+    },
+    "m025": {
+      "consulta_en": "man takes a blue pill and discovers that the world is a simulated reality controlled by robots",
+      "ano_min": null,
+      "ano_max": null,
+      "generos": [
+        "science fiction",
+        "action"
+      ],
+      "pessoas": [
+        "keanu reeves"
+      ],
+      "fallback": false
+    },
+    "m026": {
+      "consulta_en": "man wakes up every day on the same day, thinks he has a marmot that is causing the time loop",
+      "ano_min": null,
+      "ano_max": null,
+      "generos": [],
+      "pessoas": [],
+      "fallback": false
+    },
+    "m027": {
+      "consulta_en": "venomous spiders from the Amazon start killing people in a small American town, a comedy-horror film",
+      "ano_min": null,
+      "ano_max": null,
+      "generos": [
+        "comedy",
+        "horror"
+      ],
+      "pessoas": [],
+      "fallback": false
+    },
+    "m028": {
+      "consulta_en": "Japanese anime, girl's parents see pigs, she goes to work at a bathhouse full of spirits",
+      "ano_min": null,
+      "ano_max": null,
+      "generos": [
+        "animation"
+      ],
+      "pessoas": [],
+      "fallback": false
+    },
+    "m029": {
+      "consulta_en": "Indian comedy film about three friends at an engineering college, one of them questions the teaching methods, there is a musical and a musical number",
+      "ano_min": null,
+      "ano_max": null,
+      "generos": [
+        "comedy",
+        "musical"
+      ],
+      "pessoas": [],
+      "fallback": false
+    },
+    "m030": {
+      "consulta_en": "Korean zombie movie: a father and daughter take a train and the virus spreads throughout the cars",
+      "ano_min": null,
+      "ano_max": null,
+      "generos": [
+        "zombie",
+        "thriller"
+      ],
+      "pessoas": [],
+      "fallback": false
+    }
+  },
+  "titulos_vazados": [
+    "m016 Ghost",
+    "m020 Taxi Driver"
+  ],
+  "variacoes": {
+    "vetor": {
+      "parametros": {
+        "modo": "vetor",
+        "vetor": "pt"
+      },
+      "metricas": {
+        "recall@20": 0.6333,
+        "hit@1": 0.3,
+        "hit@3": 0.4667,
+        "hit@10": 0.5,
+        "mrr": 0.3802
+      },
+      "casos": [
+        {
+          "id": "m001",
+          "titulo": "Inception",
+          "categoria": "cena",
+          "posicao": null,
+          "primeiro": "Pitfall (1962)",
+          "ms": 1541
+        },
+        {
+          "id": "m002",
+          "titulo": "The Sixth Sense",
+          "categoria": "cena",
+          "posicao": null,
+          "primeiro": "The Messenger (2015)",
+          "ms": 1677
+        },
+        {
+          "id": "m003",
+          "titulo": "Psycho",
+          "categoria": "cena",
+          "posicao": 18,
+          "primeiro": "Switchback (1997)",
+          "ms": 1637
+        },
+        {
+          "id": "m004",
+          "titulo": "The Shawshank Redemption",
+          "categoria": "cena",
+          "posicao": null,
+          "primeiro": "Convict 13 (1920)",
+          "ms": 1485
+        },
+        {
+          "id": "m005",
+          "titulo": "E.T. the Extra-Terrestrial",
+          "categoria": "cena",
+          "posicao": null,
+          "primeiro": "Jimmy Neutron: Boy Genius (2001)",
+          "ms": 1143
+        },
+        {
+          "id": "m006",
+          "titulo": "Singin' in the Rain",
+          "categoria": "cena",
+          "posicao": null,
+          "primeiro": "It's Trad, Dad! (1962)",
+          "ms": 1407
+        },
+        {
+          "id": "m007",
+          "titulo": "Misery",
+          "categoria": "cena",
+          "posicao": null,
+          "primeiro": "Crash (1996)",
+          "ms": 1822
+        },
+        {
+          "id": "m008",
+          "titulo": "Speed",
+          "categoria": "cena",
+          "posicao": 1,
+          "primeiro": "Speed (1994)",
+          "ms": 1060
+        },
+        {
+          "id": "m009",
+          "titulo": "The Truman Show",
+          "categoria": "enredo",
+          "posicao": null,
+          "primeiro": "Man About Town (2006)",
+          "ms": 1182
+        },
+        {
+          "id": "m010",
+          "titulo": "Up",
+          "categoria": "enredo",
+          "posicao": 13,
+          "primeiro": "The Oogieloves in the Big Balloon Adventure (2012)",
+          "ms": 809
+        },
+        {
+          "id": "m011",
+          "titulo": "Eternal Sunshine of the Spotless Mind",
+          "categoria": "enredo",
+          "posicao": null,
+          "primeiro": "Manasaare (2009)",
+          "ms": 1157
+        },
+        {
+          "id": "m012",
+          "titulo": "The Hangover",
+          "categoria": "enredo",
+          "posicao": 1,
+          "primeiro": "The Hangover (2009)",
+          "ms": 901
+        },
+        {
+          "id": "m013",
+          "titulo": "Ratatouille",
+          "categoria": "enredo",
+          "posicao": 1,
+          "primeiro": "Ratatouille (2007)",
+          "ms": 468
+        },
+        {
+          "id": "m014",
+          "titulo": "12 Angry Men",
+          "categoria": "enredo",
+          "posicao": 3,
+          "primeiro": "Ek Ruka Hua Faisla (1986)",
+          "ms": 593
+        },
+        {
+          "id": "m015",
+          "titulo": "The Exorcist",
+          "categoria": "epoca",
+          "posicao": null,
+          "primeiro": "Hands of the Ripper (1971)",
+          "ms": 906
+        },
+        {
+          "id": "m016",
+          "titulo": "Ghost",
+          "categoria": "epoca",
+          "posicao": 19,
+          "primeiro": "The Undead (1957)",
+          "ms": 549
+        },
+        {
+          "id": "m017",
+          "titulo": "Rear Window",
+          "categoria": "epoca",
+          "posicao": 2,
+          "primeiro": "Attack of the 50 Foot Woman (1958)",
+          "ms": 500
+        },
+        {
+          "id": "m018",
+          "titulo": "Mad Max: Fury Road",
+          "categoria": "epoca",
+          "posicao": 13,
+          "primeiro": "Tracers (2015)",
+          "ms": 687
+        },
+        {
+          "id": "m019",
+          "titulo": "Cast Away",
+          "categoria": "pessoa",
+          "posicao": 3,
+          "primeiro": "Big Game (2014)",
+          "ms": 820
+        },
+        {
+          "id": "m020",
+          "titulo": "Taxi Driver",
+          "categoria": "pessoa",
+          "posicao": 1,
+          "primeiro": "Taxi Driver (1976)",
+          "ms": 631
+        },
+        {
+          "id": "m021",
+          "titulo": "The Shining",
+          "categoria": "pessoa",
+          "posicao": 1,
+          "primeiro": "The Shining (1980)",
+          "ms": 463
+        },
+        {
+          "id": "m022",
+          "titulo": "The Devil Wears Prada",
+          "categoria": "pessoa",
+          "posicao": 1,
+          "primeiro": "The Devil Wears Prada (2006)",
+          "ms": 834
+        },
+        {
+          "id": "m023",
+          "titulo": "Back to the Future",
+          "categoria": "memoria_errada",
+          "posicao": 3,
+          "primeiro": "Back to the Future Part III (1990)",
+          "ms": 531
+        },
+        {
+          "id": "m024",
+          "titulo": "Home Alone",
+          "categoria": "memoria_errada",
+          "posicao": 7,
+          "primeiro": "Paddington (2015)",
+          "ms": 348
+        },
+        {
+          "id": "m025",
+          "titulo": "The Matrix",
+          "categoria": "memoria_errada",
+          "posicao": 2,
+          "primeiro": "Avalon (2001)",
+          "ms": 503
+        },
+        {
+          "id": "m026",
+          "titulo": "Groundhog Day",
+          "categoria": "termo_traduzido",
+          "posicao": null,
+          "primeiro": "Watermelon Man (1970)",
+          "ms": 616
+        },
+        {
+          "id": "m027",
+          "titulo": "Arachnophobia",
+          "categoria": "termo_traduzido",
+          "posicao": 1,
+          "primeiro": "Arachnophobia (1990)",
+          "ms": 711
+        },
+        {
+          "id": "m028",
+          "titulo": "Spirited Away",
+          "categoria": "nao_americano",
+          "posicao": 1,
+          "primeiro": "Spirited Away (2001)",
+          "ms": 647
+        },
+        {
+          "id": "m029",
+          "titulo": "3 Idiots",
+          "categoria": "nao_americano",
+          "posicao": null,
+          "primeiro": "Uriyadi (2016)",
+          "ms": 905
+        },
+        {
+          "id": "m030",
+          "titulo": "Train to Busan",
+          "categoria": "nao_americano",
+          "posicao": 1,
+          "primeiro": "Train to Busan (2016)",
+          "ms": 438
+        }
+      ]
+    },
+    "vetor_en": {
+      "parametros": {
+        "modo": "vetor",
+        "vetor": "en"
+      },
+      "metricas": {
+        "recall@20": 0.5667,
+        "hit@1": 0.3,
+        "hit@3": 0.3667,
+        "hit@10": 0.5333,
+        "mrr": 0.3648
+      },
+      "casos": [
+        {
+          "id": "m001",
+          "titulo": "Inception",
+          "categoria": "cena",
+          "posicao": null,
+          "primeiro": "The Return (2003)",
+          "ms": 316
+        },
+        {
+          "id": "m002",
+          "titulo": "The Sixth Sense",
+          "categoria": "cena",
+          "posicao": null,
+          "primeiro": "The Messenger (2015)",
+          "ms": 360
+        },
+        {
+          "id": "m003",
+          "titulo": "Psycho",
+          "categoria": "cena",
+          "posicao": 6,
+          "primeiro": "Silent Scream (1980)",
+          "ms": 289
+        },
+        {
+          "id": "m004",
+          "titulo": "The Shawshank Redemption",
+          "categoria": "cena",
+          "posicao": null,
+          "primeiro": "Police Academy 6: City Under Siege (1989)",
+          "ms": 250
+        },
+        {
+          "id": "m005",
+          "titulo": "E.T. the Extra-Terrestrial",
+          "categoria": "cena",
+          "posicao": null,
+          "primeiro": "One Got Fat (1963)",
+          "ms": 372
+        },
+        {
+          "id": "m006",
+          "titulo": "Singin' in the Rain",
+          "categoria": "cena",
+          "posicao": null,
+          "primeiro": "One Froggy Evening (1955)",
+          "ms": 294
+        },
+        {
+          "id": "m007",
+          "titulo": "Misery",
+          "categoria": "cena",
+          "posicao": null,
+          "primeiro": "Crash (1996)",
+          "ms": 171
+        },
+        {
+          "id": "m008",
+          "titulo": "Speed",
+          "categoria": "cena",
+          "posicao": 1,
+          "primeiro": "Speed (1994)",
+          "ms": 112
+        },
+        {
+          "id": "m009",
+          "titulo": "The Truman Show",
+          "categoria": "enredo",
+          "posicao": null,
+          "primeiro": "Man About Town (2006)",
+          "ms": 223
+        },
+        {
+          "id": "m010",
+          "titulo": "Up",
+          "categoria": "enredo",
+          "posicao": null,
+          "primeiro": "The Balloonatic (1923)",
+          "ms": 263
+        },
+        {
+          "id": "m011",
+          "titulo": "Eternal Sunshine of the Spotless Mind",
+          "categoria": "enredo",
+          "posicao": null,
+          "primeiro": "Manasaare (2009)",
+          "ms": 247
+        },
+        {
+          "id": "m012",
+          "titulo": "The Hangover",
+          "categoria": "enredo",
+          "posicao": 1,
+          "primeiro": "The Hangover (2009)",
+          "ms": 216
+        },
+        {
+          "id": "m013",
+          "titulo": "Ratatouille",
+          "categoria": "enredo",
+          "posicao": null,
+          "primeiro": "MouseHunt (1997)",
+          "ms": 159
+        },
+        {
+          "id": "m014",
+          "titulo": "12 Angry Men",
+          "categoria": "enredo",
+          "posicao": 4,
+          "primeiro": "12 Angry Men (1997)",
+          "ms": 101
+        },
+        {
+          "id": "m015",
+          "titulo": "The Exorcist",
+          "categoria": "epoca",
+          "posicao": 6,
+          "primeiro": "Soorya Kireedam (2007)",
+          "ms": 189
+        },
+        {
+          "id": "m016",
+          "titulo": "Ghost",
+          "categoria": "epoca",
+          "posicao": 9,
+          "primeiro": "Ghosts of Girlfriends Past (2009)",
+          "ms": 200
+        },
+        {
+          "id": "m017",
+          "titulo": "Rear Window",
+          "categoria": "epoca",
+          "posicao": 12,
+          "primeiro": "Two Evil Eyes (1991)",
+          "ms": 184
+        },
+        {
+          "id": "m018",
+          "titulo": "Mad Max: Fury Road",
+          "categoria": "epoca",
+          "posicao": null,
+          "primeiro": "Hot Pursuit (2015)",
+          "ms": 154
+        },
+        {
+          "id": "m019",
+          "titulo": "Cast Away",
+          "categoria": "pessoa",
+          "posicao": 1,
+          "primeiro": "Cast Away (2000)",
+          "ms": 229
+        },
+        {
+          "id": "m020",
+          "titulo": "Taxi Driver",
+          "categoria": "pessoa",
+          "posicao": 2,
+          "primeiro": "Being Flynn (2012)",
+          "ms": 215
+        },
+        {
+          "id": "m021",
+          "titulo": "The Shining",
+          "categoria": "pessoa",
+          "posicao": null,
+          "primeiro": "Jack Reacher (2012)",
+          "ms": 161
+        },
+        {
+          "id": "m022",
+          "titulo": "The Devil Wears Prada",
+          "categoria": "pessoa",
+          "posicao": 1,
+          "primeiro": "The Devil Wears Prada (2006)",
+          "ms": 183
+        },
+        {
+          "id": "m023",
+          "titulo": "Back to the Future",
+          "categoria": "memoria_errada",
+          "posicao": 2,
+          "primeiro": "Maroko (1990)",
+          "ms": 86
+        },
+        {
+          "id": "m024",
+          "titulo": "Home Alone",
+          "categoria": "memoria_errada",
+          "posicao": 6,
+          "primeiro": "Boy (1969)",
+          "ms": 159
+        },
+        {
+          "id": "m025",
+          "titulo": "The Matrix",
+          "categoria": "memoria_errada",
+          "posicao": 1,
+          "primeiro": "The Matrix (1999)",
+          "ms": 150
+        },
+        {
+          "id": "m026",
+          "titulo": "Groundhog Day",
+          "categoria": "termo_traduzido",
+          "posicao": 1,
+          "primeiro": "Groundhog Day (1993)",
+          "ms": 175
+        },
+        {
+          "id": "m027",
+          "titulo": "Arachnophobia",
+          "categoria": "termo_traduzido",
+          "posicao": 1,
+          "primeiro": "Arachnophobia (1990)",
+          "ms": 132
+        },
+        {
+          "id": "m028",
+          "titulo": "Spirited Away",
+          "categoria": "nao_americano",
+          "posicao": 1,
+          "primeiro": "Spirited Away (2001)",
+          "ms": 107
+        },
+        {
+          "id": "m029",
+          "titulo": "3 Idiots",
+          "categoria": "nao_americano",
+          "posicao": null,
+          "primeiro": "Happy Days - Telugu dubbing (2007)",
+          "ms": 182
+        },
+        {
+          "id": "m030",
+          "titulo": "Train to Busan",
+          "categoria": "nao_americano",
+          "posicao": 1,
+          "primeiro": "Train to Busan (2016)",
+          "ms": 112
+        }
+      ]
+    },
+    "texto_en": {
+      "parametros": {
+        "modo": "texto",
+        "texto": "en"
+      },
+      "metricas": {
+        "recall@20": 0.6667,
+        "hit@1": 0.2333,
+        "hit@3": 0.4,
+        "hit@10": 0.5667,
+        "mrr": 0.3432
+      },
+      "casos": [
+        {
+          "id": "m001",
+          "titulo": "Inception",
+          "categoria": "cena",
+          "posicao": 17,
+          "primeiro": "Strangers on a Train (1951)",
+          "ms": 3306
+        },
+        {
+          "id": "m002",
+          "titulo": "The Sixth Sense",
+          "categoria": "cena",
+          "posicao": null,
+          "primeiro": "Hollywood Hong Kong (2001)",
+          "ms": 1874
+        },
+        {
+          "id": "m003",
+          "titulo": "Psycho",
+          "categoria": "cena",
+          "posicao": 4,
+          "primeiro": "The Black Dahlia (2006)",
+          "ms": 1810
+        },
+        {
+          "id": "m004",
+          "titulo": "The Shawshank Redemption",
+          "categoria": "cena",
+          "posicao": 5,
+          "primeiro": "Holes (2003)",
+          "ms": 1952
+        },
+        {
+          "id": "m005",
+          "titulo": "E.T. the Extra-Terrestrial",
+          "categoria": "cena",
+          "posicao": null,
+          "primeiro": "Little Red Riding Rabbit (1944)",
+          "ms": 1546
+        },
+        {
+          "id": "m006",
+          "titulo": "Singin' in the Rain",
+          "categoria": "cena",
+          "posicao": 4,
+          "primeiro": "Dream of a Rarebit Fiend (1906)",
+          "ms": 908
+        },
+        {
+          "id": "m007",
+          "titulo": "Misery",
+          "categoria": "cena",
+          "posicao": null,
+          "primeiro": "Young and Dangerous 3 (1996)",
+          "ms": 942
+        },
+        {
+          "id": "m008",
+          "titulo": "Speed",
+          "categoria": "cena",
+          "posicao": 3,
+          "primeiro": "Zombie Hunter (2013)",
+          "ms": 740
+        },
+        {
+          "id": "m009",
+          "titulo": "The Truman Show",
+          "categoria": "enredo",
+          "posicao": 19,
+          "primeiro": "Three (2006)",
+          "ms": 133
+        },
+        {
+          "id": "m010",
+          "titulo": "Up",
+          "categoria": "enredo",
+          "posicao": null,
+          "primeiro": "The Oogieloves in the Big Balloon Adventure (2012)",
+          "ms": 386
+        },
+        {
+          "id": "m011",
+          "titulo": "Eternal Sunshine of the Spotless Mind",
+          "categoria": "enredo",
+          "posicao": 2,
+          "primeiro": "X-Men Origins: Wolverine (2009)",
+          "ms": 622
+        },
+        {
+          "id": "m012",
+          "titulo": "The Hangover",
+          "categoria": "enredo",
+          "posicao": 3,
+          "primeiro": "Lost Honeymoon (1947)",
+          "ms": 1083
+        },
+        {
+          "id": "m013",
+          "titulo": "Ratatouille",
+          "categoria": "enredo",
+          "posicao": 15,
+          "primeiro": "Part Time Pal (1947)",
+          "ms": 456
+        },
+        {
+          "id": "m014",
+          "titulo": "12 Angry Men",
+          "categoria": "enredo",
+          "posicao": null,
+          "primeiro": "The Young Philadelphians (1959)",
+          "ms": 663
+        },
+        {
+          "id": "m015",
+          "titulo": "The Exorcist",
+          "categoria": "epoca",
+          "posicao": 2,
+          "primeiro": "Scooby-Doo (2002)",
+          "ms": 133
+        },
+        {
+          "id": "m016",
+          "titulo": "Ghost",
+          "categoria": "epoca",
+          "posicao": null,
+          "primeiro": "Shutter (2008)",
+          "ms": 340
+        },
+        {
+          "id": "m017",
+          "titulo": "Rear Window",
+          "categoria": "epoca",
+          "posicao": 1,
+          "primeiro": "Rear Window (1954)",
+          "ms": 488
+        },
+        {
+          "id": "m018",
+          "titulo": "Mad Max: Fury Road",
+          "categoria": "epoca",
+          "posicao": 6,
+          "primeiro": "Laserblast (1978)",
+          "ms": 1266
+        },
+        {
+          "id": "m019",
+          "titulo": "Cast Away",
+          "categoria": "pessoa",
+          "posicao": 1,
+          "primeiro": "Cast Away (2000)",
+          "ms": 600
+        },
+        {
+          "id": "m020",
+          "titulo": "Taxi Driver",
+          "categoria": "pessoa",
+          "posicao": null,
+          "primeiro": "Windows (1980)",
+          "ms": 767
+        },
+        {
+          "id": "m021",
+          "titulo": "The Shining",
+          "categoria": "pessoa",
+          "posicao": 1,
+          "primeiro": "The Shining (1980)",
+          "ms": 571
+        },
+        {
+          "id": "m022",
+          "titulo": "The Devil Wears Prada",
+          "categoria": "pessoa",
+          "posicao": 1,
+          "primeiro": "The Devil Wears Prada (2006)",
+          "ms": 520
+        },
+        {
+          "id": "m023",
+          "titulo": "Back to the Future",
+          "categoria": "memoria_errada",
+          "posicao": null,
+          "primeiro": "Young Frankenstein (1974)",
+          "ms": 172
+        },
+        {
+          "id": "m024",
+          "titulo": "Home Alone",
+          "categoria": "memoria_errada",
+          "posicao": null,
+          "primeiro": "Vengeance Valley (1951)",
+          "ms": 302
+        },
+        {
+          "id": "m025",
+          "titulo": "The Matrix",
+          "categoria": "memoria_errada",
+          "posicao": 4,
+          "primeiro": "Evolver (1995)",
+          "ms": 150
+        },
+        {
+          "id": "m026",
+          "titulo": "Groundhog Day",
+          "categoria": "termo_traduzido",
+          "posicao": 3,
+          "primeiro": "ARQ (2016)",
+          "ms": 186
+        },
+        {
+          "id": "m027",
+          "titulo": "Arachnophobia",
+          "categoria": "termo_traduzido",
+          "posicao": 1,
+          "primeiro": "Arachnophobia (1990)",
+          "ms": 240
+        },
+        {
+          "id": "m028",
+          "titulo": "Spirited Away",
+          "categoria": "nao_americano",
+          "posicao": 1,
+          "primeiro": "Spirited Away (2001)",
+          "ms": 432
+        },
+        {
+          "id": "m029",
+          "titulo": "3 Idiots",
+          "categoria": "nao_americano",
+          "posicao": null,
+          "primeiro": "Majnu (2016)",
+          "ms": 442
+        },
+        {
+          "id": "m030",
+          "titulo": "Train to Busan",
+          "categoria": "nao_americano",
+          "posicao": 1,
+          "primeiro": "Train to Busan (2016)",
+          "ms": 287
+        }
+      ]
+    },
+    "hibrida": {
+      "parametros": {
+        "modo": "hibrida",
+        "vetor": "pt",
+        "texto": "pt"
+      },
+      "metricas": {
+        "recall@20": 0.5,
+        "hit@1": 0.2667,
+        "hit@3": 0.3333,
+        "hit@10": 0.4667,
+        "mrr": 0.3157
+      },
+      "casos": [
+        {
+          "id": "m001",
+          "titulo": "Inception",
+          "categoria": "cena",
+          "posicao": null,
+          "primeiro": "Pitfall (1962)",
+          "ms": 114
+        },
+        {
+          "id": "m002",
+          "titulo": "The Sixth Sense",
+          "categoria": "cena",
+          "posicao": null,
+          "primeiro": "The Messenger (2015)",
+          "ms": 70
+        },
+        {
+          "id": "m003",
+          "titulo": "Psycho",
+          "categoria": "cena",
+          "posicao": null,
+          "primeiro": "Switchback (1997)",
+          "ms": 64
+        },
+        {
+          "id": "m004",
+          "titulo": "The Shawshank Redemption",
+          "categoria": "cena",
+          "posicao": null,
+          "primeiro": "Convict 13 (1920)",
+          "ms": 88
+        },
+        {
+          "id": "m005",
+          "titulo": "E.T. the Extra-Terrestrial",
+          "categoria": "cena",
+          "posicao": null,
+          "primeiro": "Jimmy Neutron: Boy Genius (2001)",
+          "ms": 56
+        },
+        {
+          "id": "m006",
+          "titulo": "Singin' in the Rain",
+          "categoria": "cena",
+          "posicao": null,
+          "primeiro": "Les Bicyclettes de Belsize (1968)",
+          "ms": 311
+        },
+        {
+          "id": "m007",
+          "titulo": "Misery",
+          "categoria": "cena",
+          "posicao": null,
+          "primeiro": "Crash (1996)",
+          "ms": 93
+        },
+        {
+          "id": "m008",
+          "titulo": "Speed",
+          "categoria": "cena",
+          "posicao": 1,
+          "primeiro": "Speed (1994)",
+          "ms": 57
+        },
+        {
+          "id": "m009",
+          "titulo": "The Truman Show",
+          "categoria": "enredo",
+          "posicao": null,
+          "primeiro": "Man About Town (2006)",
+          "ms": 94
+        },
+        {
+          "id": "m010",
+          "titulo": "Up",
+          "categoria": "enredo",
+          "posicao": null,
+          "primeiro": "The Oogieloves in the Big Balloon Adventure (2012)",
+          "ms": 90
+        },
+        {
+          "id": "m011",
+          "titulo": "Eternal Sunshine of the Spotless Mind",
+          "categoria": "enredo",
+          "posicao": null,
+          "primeiro": "Manasaare (2009)",
+          "ms": 43
+        },
+        {
+          "id": "m012",
+          "titulo": "The Hangover",
+          "categoria": "enredo",
+          "posicao": 1,
+          "primeiro": "The Hangover (2009)",
+          "ms": 240
+        },
+        {
+          "id": "m013",
+          "titulo": "Ratatouille",
+          "categoria": "enredo",
+          "posicao": 1,
+          "primeiro": "Ratatouille (2007)",
+          "ms": 93
+        },
+        {
+          "id": "m014",
+          "titulo": "12 Angry Men",
+          "categoria": "enredo",
+          "posicao": 6,
+          "primeiro": "Ek Ruka Hua Faisla (1986)",
+          "ms": 96
+        },
+        {
+          "id": "m015",
+          "titulo": "The Exorcist",
+          "categoria": "epoca",
+          "posicao": null,
+          "primeiro": "Hands of the Ripper (1971)",
+          "ms": 119
+        },
+        {
+          "id": "m016",
+          "titulo": "Ghost",
+          "categoria": "epoca",
+          "posicao": null,
+          "primeiro": "The Undead (1957)",
+          "ms": 153
+        },
+        {
+          "id": "m017",
+          "titulo": "Rear Window",
+          "categoria": "epoca",
+          "posicao": 3,
+          "primeiro": "Attack of the 50 Foot Woman (1958)",
+          "ms": 89
+        },
+        {
+          "id": "m018",
+          "titulo": "Mad Max: Fury Road",
+          "categoria": "epoca",
+          "posicao": null,
+          "primeiro": "Tracers (2015)",
+          "ms": 172
+        },
+        {
+          "id": "m019",
+          "titulo": "Cast Away",
+          "categoria": "pessoa",
+          "posicao": 5,
+          "primeiro": "Big Game (2014)",
+          "ms": 193
+        },
+        {
+          "id": "m020",
+          "titulo": "Taxi Driver",
+          "categoria": "pessoa",
+          "posicao": 6,
+          "primeiro": "Flawless (1999)",
+          "ms": 242
+        },
+        {
+          "id": "m021",
+          "titulo": "The Shining",
+          "categoria": "pessoa",
+          "posicao": 1,
+          "primeiro": "The Shining (1980)",
+          "ms": 202
+        },
+        {
+          "id": "m022",
+          "titulo": "The Devil Wears Prada",
+          "categoria": "pessoa",
+          "posicao": 1,
+          "primeiro": "The Devil Wears Prada (2006)",
+          "ms": 63
+        },
+        {
+          "id": "m023",
+          "titulo": "Back to the Future",
+          "categoria": "memoria_errada",
+          "posicao": 5,
+          "primeiro": "Back to the Future Part III (1990)",
+          "ms": 122
+        },
+        {
+          "id": "m024",
+          "titulo": "Home Alone",
+          "categoria": "memoria_errada",
+          "posicao": 14,
+          "primeiro": "Paddington (2015)",
+          "ms": 48
+        },
+        {
+          "id": "m025",
+          "titulo": "The Matrix",
+          "categoria": "memoria_errada",
+          "posicao": 3,
+          "primeiro": "Avalon (2001)",
+          "ms": 92
+        },
+        {
+          "id": "m026",
+          "titulo": "Groundhog Day",
+          "categoria": "termo_traduzido",
+          "posicao": null,
+          "primeiro": "Watermelon Man (1970)",
+          "ms": 65
+        },
+        {
+          "id": "m027",
+          "titulo": "Arachnophobia",
+          "categoria": "termo_traduzido",
+          "posicao": 1,
+          "primeiro": "Arachnophobia (1990)",
+          "ms": 51
+        },
+        {
+          "id": "m028",
+          "titulo": "Spirited Away",
+          "categoria": "nao_americano",
+          "posicao": 1,
+          "primeiro": "Spirited Away (2001)",
+          "ms": 195
+        },
+        {
+          "id": "m029",
+          "titulo": "3 Idiots",
+          "categoria": "nao_americano",
+          "posicao": null,
+          "primeiro": "Uriyadi (2016)",
+          "ms": 251
+        },
+        {
+          "id": "m030",
+          "titulo": "Train to Busan",
+          "categoria": "nao_americano",
+          "posicao": 1,
+          "primeiro": "Train to Busan (2016)",
+          "ms": 85
+        }
+      ]
+    },
+    "hibrida_en": {
+      "parametros": {
+        "modo": "hibrida",
+        "vetor": "en",
+        "texto": "en"
+      },
+      "metricas": {
+        "recall@20": 0.7333,
+        "hit@1": 0.3667,
+        "hit@3": 0.5,
+        "hit@10": 0.6333,
+        "mrr": 0.4471
+      },
+      "casos": [
+        {
+          "id": "m001",
+          "titulo": "Inception",
+          "categoria": "cena",
+          "posicao": null,
+          "primeiro": "The Return (2003)",
+          "ms": 200
+        },
+        {
+          "id": "m002",
+          "titulo": "The Sixth Sense",
+          "categoria": "cena",
+          "posicao": null,
+          "primeiro": "The Messenger (2015)",
+          "ms": 199
+        },
+        {
+          "id": "m003",
+          "titulo": "Psycho",
+          "categoria": "cena",
+          "posicao": 1,
+          "primeiro": "Psycho (1960)",
+          "ms": 270
+        },
+        {
+          "id": "m004",
+          "titulo": "The Shawshank Redemption",
+          "categoria": "cena",
+          "posicao": 10,
+          "primeiro": "The Wooden Horse (1950)",
+          "ms": 381
+        },
+        {
+          "id": "m005",
+          "titulo": "E.T. the Extra-Terrestrial",
+          "categoria": "cena",
+          "posicao": null,
+          "primeiro": "One Got Fat (1963)",
+          "ms": 457
+        },
+        {
+          "id": "m006",
+          "titulo": "Singin' in the Rain",
+          "categoria": "cena",
+          "posicao": 9,
+          "primeiro": "The Beggar's Opera (1953)",
+          "ms": 335
+        },
+        {
+          "id": "m007",
+          "titulo": "Misery",
+          "categoria": "cena",
+          "posicao": null,
+          "primeiro": "Homecoming (2009)",
+          "ms": 418
+        },
+        {
+          "id": "m008",
+          "titulo": "Speed",
+          "categoria": "cena",
+          "posicao": 1,
+          "primeiro": "Speed (1994)",
+          "ms": 317
+        },
+        {
+          "id": "m009",
+          "titulo": "The Truman Show",
+          "categoria": "enredo",
+          "posicao": null,
+          "primeiro": "Public Access (1993)",
+          "ms": 75
+        },
+        {
+          "id": "m010",
+          "titulo": "Up",
+          "categoria": "enredo",
+          "posicao": null,
+          "primeiro": "Danny Deckchair (2003)",
+          "ms": 392
+        },
+        {
+          "id": "m011",
+          "titulo": "Eternal Sunshine of the Spotless Mind",
+          "categoria": "enredo",
+          "posicao": 5,
+          "primeiro": "50/50 (2011)",
+          "ms": 688
+        },
+        {
+          "id": "m012",
+          "titulo": "The Hangover",
+          "categoria": "enredo",
+          "posicao": 1,
+          "primeiro": "The Hangover (2009)",
+          "ms": 964
+        },
+        {
+          "id": "m013",
+          "titulo": "Ratatouille",
+          "categoria": "enredo",
+          "posicao": null,
+          "primeiro": "King-Size Canary (1947)",
+          "ms": 408
+        },
+        {
+          "id": "m014",
+          "titulo": "12 Angry Men",
+          "categoria": "enredo",
+          "posicao": 9,
+          "primeiro": "Jury Duty (1995)",
+          "ms": 496
+        },
+        {
+          "id": "m015",
+          "titulo": "The Exorcist",
+          "categoria": "epoca",
+          "posicao": 2,
+          "primeiro": "The Priests (2015)",
+          "ms": 111
+        },
+        {
+          "id": "m016",
+          "titulo": "Ghost",
+          "categoria": "epoca",
+          "posicao": 20,
+          "primeiro": "Talk Back and You're Dead (2014)",
+          "ms": 312
+        },
+        {
+          "id": "m017",
+          "titulo": "Rear Window",
+          "categoria": "epoca",
+          "posicao": 1,
+          "primeiro": "Rear Window (1954)",
+          "ms": 427
+        },
+        {
+          "id": "m018",
+          "titulo": "Mad Max: Fury Road",
+          "categoria": "epoca",
+          "posicao": 12,
+          "primeiro": "Beyond the Reach (2015)",
+          "ms": 1038
+        },
+        {
+          "id": "m019",
+          "titulo": "Cast Away",
+          "categoria": "pessoa",
+          "posicao": 1,
+          "primeiro": "Cast Away (2000)",
+          "ms": 593
+        },
+        {
+          "id": "m020",
+          "titulo": "Taxi Driver",
+          "categoria": "pessoa",
+          "posicao": 2,
+          "primeiro": "Flawless (1999)",
+          "ms": 686
+        },
+        {
+          "id": "m021",
+          "titulo": "The Shining",
+          "categoria": "pessoa",
+          "posicao": 3,
+          "primeiro": "Jack Frost (1998)",
+          "ms": 522
+        },
+        {
+          "id": "m022",
+          "titulo": "The Devil Wears Prada",
+          "categoria": "pessoa",
+          "posicao": 1,
+          "primeiro": "The Devil Wears Prada (2006)",
+          "ms": 508
+        },
+        {
+          "id": "m023",
+          "titulo": "Back to the Future",
+          "categoria": "memoria_errada",
+          "posicao": 3,
+          "primeiro": "Maroko (1990)",
+          "ms": 151
+        },
+        {
+          "id": "m024",
+          "titulo": "Home Alone",
+          "categoria": "memoria_errada",
+          "posicao": 11,
+          "primeiro": "The Rabbit Trap (1959)",
+          "ms": 290
+        },
+        {
+          "id": "m025",
+          "titulo": "The Matrix",
+          "categoria": "memoria_errada",
+          "posicao": 1,
+          "primeiro": "The Matrix (1999)",
+          "ms": 165
+        },
+        {
+          "id": "m026",
+          "titulo": "Groundhog Day",
+          "categoria": "termo_traduzido",
+          "posicao": 1,
+          "primeiro": "Groundhog Day (1993)",
+          "ms": 237
+        },
+        {
+          "id": "m027",
+          "titulo": "Arachnophobia",
+          "categoria": "termo_traduzido",
+          "posicao": 1,
+          "primeiro": "Arachnophobia (1990)",
+          "ms": 305
+        },
+        {
+          "id": "m028",
+          "titulo": "Spirited Away",
+          "categoria": "nao_americano",
+          "posicao": 1,
+          "primeiro": "Spirited Away (2001)",
+          "ms": 391
+        },
+        {
+          "id": "m029",
+          "titulo": "3 Idiots",
+          "categoria": "nao_americano",
+          "posicao": null,
+          "primeiro": "Munna Bhai M.B.B.S. (2003)",
+          "ms": 369
+        },
+        {
+          "id": "m030",
+          "titulo": "Train to Busan",
+          "categoria": "nao_americano",
+          "posicao": 1,
+          "primeiro": "Train to Busan (2016)",
+          "ms": 262
+        }
+      ]
+    },
+    "hibrida_mista": {
+      "parametros": {
+        "modo": "hibrida",
+        "vetor": "pt",
+        "texto": "en"
+      },
+      "metricas": {
+        "recall@20": 0.7333,
+        "hit@1": 0.3667,
+        "hit@3": 0.4333,
+        "hit@10": 0.6667,
+        "mrr": 0.444
+      },
+      "casos": [
+        {
+          "id": "m001",
+          "titulo": "Inception",
+          "categoria": "cena",
+          "posicao": null,
+          "primeiro": "Pitfall (1962)",
+          "ms": 187
+        },
+        {
+          "id": "m002",
+          "titulo": "The Sixth Sense",
+          "categoria": "cena",
+          "posicao": null,
+          "primeiro": "The Messenger (2015)",
+          "ms": 149
+        },
+        {
+          "id": "m003",
+          "titulo": "Psycho",
+          "categoria": "cena",
+          "posicao": 1,
+          "primeiro": "Psycho (1960)",
+          "ms": 262
+        },
+        {
+          "id": "m004",
+          "titulo": "The Shawshank Redemption",
+          "categoria": "cena",
+          "posicao": 10,
+          "primeiro": "Police Academy 6: City Under Siege (1989)",
+          "ms": 418
+        },
+        {
+          "id": "m005",
+          "titulo": "E.T. the Extra-Terrestrial",
+          "categoria": "cena",
+          "posicao": null,
+          "primeiro": "Jimmy Neutron: Boy Genius (2001)",
+          "ms": 475
+        },
+        {
+          "id": "m006",
+          "titulo": "Singin' in the Rain",
+          "categoria": "cena",
+          "posicao": 7,
+          "primeiro": "It's Trad, Dad! (1962)",
+          "ms": 400
+        },
+        {
+          "id": "m007",
+          "titulo": "Misery",
+          "categoria": "cena",
+          "posicao": null,
+          "primeiro": "Crash (1996)",
+          "ms": 656
+        },
+        {
+          "id": "m008",
+          "titulo": "Speed",
+          "categoria": "cena",
+          "posicao": 1,
+          "primeiro": "Speed (1994)",
+          "ms": 564
+        },
+        {
+          "id": "m009",
+          "titulo": "The Truman Show",
+          "categoria": "enredo",
+          "posicao": null,
+          "primeiro": "Public Access (1993)",
+          "ms": 168
+        },
+        {
+          "id": "m010",
+          "titulo": "Up",
+          "categoria": "enredo",
+          "posicao": null,
+          "primeiro": "We're Back! A Dinosaur's Story (1993)",
+          "ms": 492
+        },
+        {
+          "id": "m011",
+          "titulo": "Eternal Sunshine of the Spotless Mind",
+          "categoria": "enredo",
+          "posicao": 4,
+          "primeiro": "Manasaare (2009)",
+          "ms": 1141
+        },
+        {
+          "id": "m012",
+          "titulo": "The Hangover",
+          "categoria": "enredo",
+          "posicao": 1,
+          "primeiro": "The Hangover (2009)",
+          "ms": 2683
+        },
+        {
+          "id": "m013",
+          "titulo": "Ratatouille",
+          "categoria": "enredo",
+          "posicao": 2,
+          "primeiro": "King-Size Canary (1947)",
+          "ms": 1057
+        },
+        {
+          "id": "m014",
+          "titulo": "12 Angry Men",
+          "categoria": "enredo",
+          "posicao": 6,
+          "primeiro": "Jury Duty (1995)",
+          "ms": 1092
+        },
+        {
+          "id": "m015",
+          "titulo": "The Exorcist",
+          "categoria": "epoca",
+          "posicao": 6,
+          "primeiro": "Annabelle (2014)",
+          "ms": 241
+        },
+        {
+          "id": "m016",
+          "titulo": "Ghost",
+          "categoria": "epoca",
+          "posicao": null,
+          "primeiro": "The Undead (1957)",
+          "ms": 533
+        },
+        {
+          "id": "m017",
+          "titulo": "Rear Window",
+          "categoria": "epoca",
+          "posicao": 1,
+          "primeiro": "Rear Window (1954)",
+          "ms": 767
+        },
+        {
+          "id": "m018",
+          "titulo": "Mad Max: Fury Road",
+          "categoria": "epoca",
+          "posicao": 11,
+          "primeiro": "Tracers (2015)",
+          "ms": 4019
+        },
+        {
+          "id": "m019",
+          "titulo": "Cast Away",
+          "categoria": "pessoa",
+          "posicao": 1,
+          "primeiro": "Cast Away (2000)",
+          "ms": 1580
+        },
+        {
+          "id": "m020",
+          "titulo": "Taxi Driver",
+          "categoria": "pessoa",
+          "posicao": 2,
+          "primeiro": "Flawless (1999)",
+          "ms": 1707
+        },
+        {
+          "id": "m021",
+          "titulo": "The Shining",
+          "categoria": "pessoa",
+          "posicao": 1,
+          "primeiro": "The Shining (1980)",
+          "ms": 1988
+        },
+        {
+          "id": "m022",
+          "titulo": "The Devil Wears Prada",
+          "categoria": "pessoa",
+          "posicao": 1,
+          "primeiro": "The Devil Wears Prada (2006)",
+          "ms": 1451
+        },
+        {
+          "id": "m023",
+          "titulo": "Back to the Future",
+          "categoria": "memoria_errada",
+          "posicao": 5,
+          "primeiro": "Back to the Future Part III (1990)",
+          "ms": 461
+        },
+        {
+          "id": "m024",
+          "titulo": "Home Alone",
+          "categoria": "memoria_errada",
+          "posicao": 17,
+          "primeiro": "Paddington (2015)",
+          "ms": 1149
+        },
+        {
+          "id": "m025",
+          "titulo": "The Matrix",
+          "categoria": "memoria_errada",
+          "posicao": 1,
+          "primeiro": "The Matrix (1999)",
+          "ms": 537
+        },
+        {
+          "id": "m026",
+          "titulo": "Groundhog Day",
+          "categoria": "termo_traduzido",
+          "posicao": 7,
+          "primeiro": "Watermelon Man (1970)",
+          "ms": 490
+        },
+        {
+          "id": "m027",
+          "titulo": "Arachnophobia",
+          "categoria": "termo_traduzido",
+          "posicao": 1,
+          "primeiro": "Arachnophobia (1990)",
+          "ms": 637
+        },
+        {
+          "id": "m028",
+          "titulo": "Spirited Away",
+          "categoria": "nao_americano",
+          "posicao": 1,
+          "primeiro": "Spirited Away (2001)",
+          "ms": 1083
+        },
+        {
+          "id": "m029",
+          "titulo": "3 Idiots",
+          "categoria": "nao_americano",
+          "posicao": null,
+          "primeiro": "Koothara (2014)",
+          "ms": 980
+        },
+        {
+          "id": "m030",
+          "titulo": "Train to Busan",
+          "categoria": "nao_americano",
+          "posicao": 1,
+          "primeiro": "Train to Busan (2016)",
+          "ms": 486
+        }
+      ]
+    },
+    "hibrida_en_filtros": {
+      "parametros": {
+        "modo": "hibrida",
+        "vetor": "en",
+        "texto": "en",
+        "filtros": "llm"
+      },
+      "metricas": {
+        "recall@20": 0.7,
+        "hit@1": 0.4,
+        "hit@3": 0.5,
+        "hit@10": 0.6667,
+        "mrr": 0.4704
+      },
+      "casos": [
+        {
+          "id": "m001",
+          "titulo": "Inception",
+          "categoria": "cena",
+          "posicao": null,
+          "primeiro": "The Return (2003)",
+          "ms": 217
+        },
+        {
+          "id": "m002",
+          "titulo": "The Sixth Sense",
+          "categoria": "cena",
+          "posicao": null,
+          "primeiro": "The Messenger (2015)",
+          "ms": 155
+        },
+        {
+          "id": "m003",
+          "titulo": "Psycho",
+          "categoria": "cena",
+          "posicao": 1,
+          "primeiro": "Psycho (1960)",
+          "ms": 218
+        },
+        {
+          "id": "m004",
+          "titulo": "The Shawshank Redemption",
+          "categoria": "cena",
+          "posicao": 10,
+          "primeiro": "The Wooden Horse (1950)",
+          "ms": 373
+        },
+        {
+          "id": "m005",
+          "titulo": "E.T. the Extra-Terrestrial",
+          "categoria": "cena",
+          "posicao": null,
+          "primeiro": "One Got Fat (1963)",
+          "ms": 426
+        },
+        {
+          "id": "m006",
+          "titulo": "Singin' in the Rain",
+          "categoria": "cena",
+          "posicao": 9,
+          "primeiro": "The Beggar's Opera (1953)",
+          "ms": 275
+        },
+        {
+          "id": "m007",
+          "titulo": "Misery",
+          "categoria": "cena",
+          "posicao": null,
+          "primeiro": "Homecoming (2009)",
+          "ms": 348
+        },
+        {
+          "id": "m008",
+          "titulo": "Speed",
+          "categoria": "cena",
+          "posicao": 1,
+          "primeiro": "Speed (1994)",
+          "ms": 270
+        },
+        {
+          "id": "m009",
+          "titulo": "The Truman Show",
+          "categoria": "enredo",
+          "posicao": null,
+          "primeiro": "Public Access (1993)",
+          "ms": 67
+        },
+        {
+          "id": "m010",
+          "titulo": "Up",
+          "categoria": "enredo",
+          "posicao": null,
+          "primeiro": "Danny Deckchair (2003)",
+          "ms": 204
+        },
+        {
+          "id": "m011",
+          "titulo": "Eternal Sunshine of the Spotless Mind",
+          "categoria": "enredo",
+          "posicao": 5,
+          "primeiro": "50/50 (2011)",
+          "ms": 248
+        },
+        {
+          "id": "m012",
+          "titulo": "The Hangover",
+          "categoria": "enredo",
+          "posicao": 1,
+          "primeiro": "The Hangover (2009)",
+          "ms": 487
+        },
+        {
+          "id": "m013",
+          "titulo": "Ratatouille",
+          "categoria": "enredo",
+          "posicao": null,
+          "primeiro": "King-Size Canary (1947)",
+          "ms": 270
+        },
+        {
+          "id": "m014",
+          "titulo": "12 Angry Men",
+          "categoria": "enredo",
+          "posicao": 9,
+          "primeiro": "Jury Duty (1995)",
+          "ms": 343
+        },
+        {
+          "id": "m015",
+          "titulo": "The Exorcist",
+          "categoria": "epoca",
+          "posicao": 1,
+          "primeiro": "The Exorcist (1973)",
+          "ms": 182
+        },
+        {
+          "id": "m016",
+          "titulo": "Ghost",
+          "categoria": "epoca",
+          "posicao": 2,
+          "primeiro": "The Gate II: Trespassers (1990)",
+          "ms": 228
+        },
+        {
+          "id": "m017",
+          "titulo": "Rear Window",
+          "categoria": "epoca",
+          "posicao": 1,
+          "primeiro": "Rear Window (1954)",
+          "ms": 224
+        },
+        {
+          "id": "m018",
+          "titulo": "Mad Max: Fury Road",
+          "categoria": "epoca",
+          "posicao": 6,
+          "primeiro": "Beyond the Reach (2015)",
+          "ms": 230
+        },
+        {
+          "id": "m019",
+          "titulo": "Cast Away",
+          "categoria": "pessoa",
+          "posicao": 1,
+          "primeiro": "Cast Away (2000)",
+          "ms": 449
+        },
+        {
+          "id": "m020",
+          "titulo": "Taxi Driver",
+          "categoria": "pessoa",
+          "posicao": 2,
+          "primeiro": "Flawless (1999)",
+          "ms": 502
+        },
+        {
+          "id": "m021",
+          "titulo": "The Shining",
+          "categoria": "pessoa",
+          "posicao": 3,
+          "primeiro": "Jack Frost (1998)",
+          "ms": 403
+        },
+        {
+          "id": "m022",
+          "titulo": "The Devil Wears Prada",
+          "categoria": "pessoa",
+          "posicao": 1,
+          "primeiro": "The Devil Wears Prada (2006)",
+          "ms": 355
+        },
+        {
+          "id": "m023",
+          "titulo": "Back to the Future",
+          "categoria": "memoria_errada",
+          "posicao": null,
+          "primeiro": "Back to the Future Part III (1990)",
+          "ms": 139
+        },
+        {
+          "id": "m024",
+          "titulo": "Home Alone",
+          "categoria": "memoria_errada",
+          "posicao": 11,
+          "primeiro": "The Rabbit Trap (1959)",
+          "ms": 213
+        },
+        {
+          "id": "m025",
+          "titulo": "The Matrix",
+          "categoria": "memoria_errada",
+          "posicao": 1,
+          "primeiro": "The Matrix (1999)",
+          "ms": 113
+        },
+        {
+          "id": "m026",
+          "titulo": "Groundhog Day",
+          "categoria": "termo_traduzido",
+          "posicao": 1,
+          "primeiro": "Groundhog Day (1993)",
+          "ms": 148
+        },
+        {
+          "id": "m027",
+          "titulo": "Arachnophobia",
+          "categoria": "termo_traduzido",
+          "posicao": 1,
+          "primeiro": "Arachnophobia (1990)",
+          "ms": 205
+        },
+        {
+          "id": "m028",
+          "titulo": "Spirited Away",
+          "categoria": "nao_americano",
+          "posicao": 1,
+          "primeiro": "Spirited Away (2001)",
+          "ms": 302
+        },
+        {
+          "id": "m029",
+          "titulo": "3 Idiots",
+          "categoria": "nao_americano",
+          "posicao": null,
+          "primeiro": "Munna Bhai M.B.B.S. (2003)",
+          "ms": 355
+        },
+        {
+          "id": "m030",
+          "titulo": "Train to Busan",
+          "categoria": "nao_americano",
+          "posicao": 1,
+          "primeiro": "Train to Busan (2016)",
+          "ms": 229
+        }
+      ]
+    },
+    "hibrida_en_folga": {
+      "parametros": {
+        "modo": "hibrida",
+        "vetor": "en",
+        "texto": "en",
+        "filtros": "llm_folga"
+      },
+      "metricas": {
+        "recall@20": 0.7333,
+        "hit@1": 0.4,
+        "hit@3": 0.4667,
+        "hit@10": 0.7,
+        "mrr": 0.4663
+      },
+      "casos": [
+        {
+          "id": "m001",
+          "titulo": "Inception",
+          "categoria": "cena",
+          "posicao": null,
+          "primeiro": "The Return (2003)",
+          "ms": 155
+        },
+        {
+          "id": "m002",
+          "titulo": "The Sixth Sense",
+          "categoria": "cena",
+          "posicao": null,
+          "primeiro": "The Messenger (2015)",
+          "ms": 148
+        },
+        {
+          "id": "m003",
+          "titulo": "Psycho",
+          "categoria": "cena",
+          "posicao": 1,
+          "primeiro": "Psycho (1960)",
+          "ms": 194
+        },
+        {
+          "id": "m004",
+          "titulo": "The Shawshank Redemption",
+          "categoria": "cena",
+          "posicao": 10,
+          "primeiro": "The Wooden Horse (1950)",
+          "ms": 303
+        },
+        {
+          "id": "m005",
+          "titulo": "E.T. the Extra-Terrestrial",
+          "categoria": "cena",
+          "posicao": null,
+          "primeiro": "One Got Fat (1963)",
+          "ms": 432
+        },
+        {
+          "id": "m006",
+          "titulo": "Singin' in the Rain",
+          "categoria": "cena",
+          "posicao": 9,
+          "primeiro": "The Beggar's Opera (1953)",
+          "ms": 298
+        },
+        {
+          "id": "m007",
+          "titulo": "Misery",
+          "categoria": "cena",
+          "posicao": null,
+          "primeiro": "Homecoming (2009)",
+          "ms": 368
+        },
+        {
+          "id": "m008",
+          "titulo": "Speed",
+          "categoria": "cena",
+          "posicao": 1,
+          "primeiro": "Speed (1994)",
+          "ms": 251
+        },
+        {
+          "id": "m009",
+          "titulo": "The Truman Show",
+          "categoria": "enredo",
+          "posicao": null,
+          "primeiro": "Public Access (1993)",
+          "ms": 56
+        },
+        {
+          "id": "m010",
+          "titulo": "Up",
+          "categoria": "enredo",
+          "posicao": null,
+          "primeiro": "Danny Deckchair (2003)",
+          "ms": 196
+        },
+        {
+          "id": "m011",
+          "titulo": "Eternal Sunshine of the Spotless Mind",
+          "categoria": "enredo",
+          "posicao": 5,
+          "primeiro": "50/50 (2011)",
+          "ms": 241
+        },
+        {
+          "id": "m012",
+          "titulo": "The Hangover",
+          "categoria": "enredo",
+          "posicao": 1,
+          "primeiro": "The Hangover (2009)",
+          "ms": 501
+        },
+        {
+          "id": "m013",
+          "titulo": "Ratatouille",
+          "categoria": "enredo",
+          "posicao": null,
+          "primeiro": "King-Size Canary (1947)",
+          "ms": 206
+        },
+        {
+          "id": "m014",
+          "titulo": "12 Angry Men",
+          "categoria": "enredo",
+          "posicao": 9,
+          "primeiro": "Jury Duty (1995)",
+          "ms": 352
+        },
+        {
+          "id": "m015",
+          "titulo": "The Exorcist",
+          "categoria": "epoca",
+          "posicao": 1,
+          "primeiro": "The Exorcist (1973)",
+          "ms": 51
+        },
+        {
+          "id": "m016",
+          "titulo": "Ghost",
+          "categoria": "epoca",
+          "posicao": 8,
+          "primeiro": "Teen Witch (1989)",
+          "ms": 87
+        },
+        {
+          "id": "m017",
+          "titulo": "Rear Window",
+          "categoria": "epoca",
+          "posicao": 1,
+          "primeiro": "Rear Window (1954)",
+          "ms": 209
+        },
+        {
+          "id": "m018",
+          "titulo": "Mad Max: Fury Road",
+          "categoria": "epoca",
+          "posicao": 6,
+          "primeiro": "Beyond the Reach (2015)",
+          "ms": 319
+        },
+        {
+          "id": "m019",
+          "titulo": "Cast Away",
+          "categoria": "pessoa",
+          "posicao": 1,
+          "primeiro": "Cast Away (2000)",
+          "ms": 411
+        },
+        {
+          "id": "m020",
+          "titulo": "Taxi Driver",
+          "categoria": "pessoa",
+          "posicao": 2,
+          "primeiro": "Flawless (1999)",
+          "ms": 491
+        },
+        {
+          "id": "m021",
+          "titulo": "The Shining",
+          "categoria": "pessoa",
+          "posicao": 3,
+          "primeiro": "Jack Frost (1998)",
+          "ms": 499
+        },
+        {
+          "id": "m022",
+          "titulo": "The Devil Wears Prada",
+          "categoria": "pessoa",
+          "posicao": 1,
+          "primeiro": "The Devil Wears Prada (2006)",
+          "ms": 386
+        },
+        {
+          "id": "m023",
+          "titulo": "Back to the Future",
+          "categoria": "memoria_errada",
+          "posicao": 4,
+          "primeiro": "Norman's Awesome Experience (1989)",
+          "ms": 63
+        },
+        {
+          "id": "m024",
+          "titulo": "Home Alone",
+          "categoria": "memoria_errada",
+          "posicao": 11,
+          "primeiro": "The Rabbit Trap (1959)",
+          "ms": 241
+        },
+        {
+          "id": "m025",
+          "titulo": "The Matrix",
+          "categoria": "memoria_errada",
+          "posicao": 1,
+          "primeiro": "The Matrix (1999)",
+          "ms": 127
+        },
+        {
+          "id": "m026",
+          "titulo": "Groundhog Day",
+          "categoria": "termo_traduzido",
+          "posicao": 1,
+          "primeiro": "Groundhog Day (1993)",
+          "ms": 211
+        },
+        {
+          "id": "m027",
+          "titulo": "Arachnophobia",
+          "categoria": "termo_traduzido",
+          "posicao": 1,
+          "primeiro": "Arachnophobia (1990)",
+          "ms": 260
+        },
+        {
+          "id": "m028",
+          "titulo": "Spirited Away",
+          "categoria": "nao_americano",
+          "posicao": 1,
+          "primeiro": "Spirited Away (2001)",
+          "ms": 368
+        },
+        {
+          "id": "m029",
+          "titulo": "3 Idiots",
+          "categoria": "nao_americano",
+          "posicao": null,
+          "primeiro": "Munna Bhai M.B.B.S. (2003)",
+          "ms": 435
+        },
+        {
+          "id": "m030",
+          "titulo": "Train to Busan",
+          "categoria": "nao_americano",
+          "posicao": 1,
+          "primeiro": "Train to Busan (2016)",
+          "ms": 358
+        }
+      ]
+    }
+  }
+}

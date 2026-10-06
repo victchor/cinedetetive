@@ -115,6 +115,7 @@ def buscar(
     agregacao: Literal["soma", "max"] = "max",
     modo: Literal["hibrida", "vetor", "texto"] = "hibrida",
     vetor: np.ndarray | None = None,
+    consulta_texto: str | None = None,
 ) -> Resultado:
     """Devolve os k filmes mais prováveis para a descrição.
 
@@ -123,13 +124,16 @@ def buscar(
 
     `modo` liga só uma das buscas (para o eval comparar) e `vetor` reaproveita um embedding já
     calculado (o eval roda a mesma pergunta em várias variações sem chamar o Ollama de novo).
+
+    `consulta_texto` usa outro texto só na busca por palavras — por exemplo, a descrição original
+    (português) na busca por sentido e a versão reescrita em inglês na busca por palavras.
     """
     filtros = filtros or Filtros()
     if vetor is None and modo != "texto":
         vetor = embed_consulta(consulta)
     params = {
         "vetor": vetor,
-        "texto": consulta,
+        "texto": consulta_texto or consulta,
         "ano_min": filtros.ano_min,
         "ano_max": filtros.ano_max,
         "generos": filtros.generos,
